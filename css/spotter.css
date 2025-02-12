@@ -1,0 +1,93 @@
+body {
+    /*background-color: #888888;*/
+    background-color: rgba(0,0,0,0);
+    margin:0;
+    padding:0;
+	overflow:hidden;
+    font-family: Arial;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+
+    font-size: 1em;
+}
+
+#page {
+    position: absolute;
+    background-color: rgba(0,0,0,0);
+    border: 0; padding: 0;
+    /*background-color: #222222;*/
+    z-index:-1;
+}
+
+#drag {
+    position: absolute;
+    background-color:rgba(255,255,0,0);
+    z-index:10;
+    width:20%;
+    height:20%;
+    top: 40%;
+    left: 40%;
+    /*-webkit-user-select: none;*/
+    -webkit-app-region: drag;
+}
+#drag:hover {
+    cursor: move; /*background-color:rgba(255,255,0,0.5);*/
+}
+
+#drag_overlays_cont {
+    position: absolute;
+    background-color:rgba(128,128,255,0.5);
+    z-index:999;
+    width:100%;
+    height:100%;
+    top: 0;
+    left: 0;
+    border: 3px solid #ffff00;
+    box-sizing: border-box;
+    display: none;
+}
+#drag_overlays {
+    position: relative;
+    width:94%;
+    height:94%;
+    top: 3%;
+    left: 3%;
+    -webkit-app-region: drag;
+    pointer-events: auto;
+}
+
+#spotter {
+    position: absolute;
+}
+
+#rule_horizontal {
+    position: absolute;
+    z-index: 99;
+}
+
+#rule_vertical {
+    position: absolute;
+    z-index: 98;
+}
+
+#nb_wide_text {
+    position: absolute;
+    color: yellow;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    display: none;
+    font-weight: bold;
+    top: 0;
+    /*bottom: 0;*/
+}
+
+.text_shadow {
+    -webkit-filter: drop-shadow(1px 1px 1px black);
+    filter: drop-shadow(1px 1px 1px black, -1px -1px 1px white);
+}
